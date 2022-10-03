@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.item {
+  position: relative;
+  overflow: hidden;
+}
+.item:hover > .item__overlay {
+  transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transform: translateX(0) rotate(0);
+}
+.item__overlay {
+  color: #fff;
+  background-color: rgba(255, 193, 85, 0.9);
+  text-align: center;
+  transform: translateX(-100%) rotate(-180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.item__title {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+}
+.item__genre {
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.item__icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  display: inline-block;
+  position: relative;
+}
+.item__icon:before,
+.item__icon:after {
+  content: "";
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.item__icon:before {
+  width: 22px;
+  height: 12px;
+}
+.item__icon:after {
+  width: 5px;
+  height: 5px;
+}
+
+/* ssssssssssssssssssssss */
+
+.items {
+  position: relative;
+  overflow: hidden;
+}
+.items > .item__overlays {
+  transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transform: translateX(0) rotate(0);
+}
+.item__overlays {
+  color: #fff;
+  background-color: #00ff00;
+  text-align: center;
+  transform: translateX(-100%) rotate(-180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.item__titles {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+}
+.item__genres {
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.item__icons {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  display: inline-block;
+  position: relative;
+}
+.item__icons:before,
+.item__icons:after {
+  content: "";
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.item__icons:before {
+  width: 22px;
+  height: 12px;
+}
+.item__icons:after {
+  width: 5px;
+  height: 5px;
+}
+
+
+
+/* sssssssssssssss */
+.cater3-movingBG {
+  margin: 60px;
+    height: 60%;
+    background-image: url(https://th.bing.com/th/id/R.9446bad0ca0f133ee435665005cfdadf?rik=Vlm6B7tOD7yZEg&riu=http%3a%2f%2fwallpapersdsc.net%2fwp-content%2fuploads%2f2016%2f09%2fJunk-Food-Pictures.jpg&ehk=N0OhWBolCA9pmRKEGp5f4cR%2fVfFEZfqoP%2bAcEFPkPXo%3d&risl=&pid=ImgRaw&r=0);
+    background-size: 60%;
+    background-repeat: repeat-x;
+    animation: animatedBackground 15s linear alternate infinite;
+}
+
+@keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    50% { background-position: 50% 0; }
+    100% { background-position: 0 0; }
+}
+
+.flyinTxtCont {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding-bottom: 10%;
+      margin-left: 2em;
+}
+.flyIn {
+    color:#fff;
+    font-family:'Raleway';
+    text-transform:uppercase;
+    line-height:1.2em;
+    position:relative;
+  text-shadow: 2px 2px 40px rgba(0,0,0,0.7);
+}
+.lineOne {
+  transition-delay:.2s; 
+  transition:.4s ease in;
+  animation: txtFlyIn .3s linear;
+}
+.lineTwo {
+    transition-delay:.4s; 
+    transition:.6s ease in;
+    animation: txtFlyIn .6s linear;
+}
+.lineThree {
+    transition-delay:.6s; 
+    transition:.8s ease in;
+    animation: txtFlyIn .9s linear;
+}
+.lineOne, .lineTwo, .lineThree {
+    font-size:30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+.lineFour {
+    transition-delay:2s; 
+    transition:2s ease in;
+    animation: fadeIn 2s linear;
+    width: 100%;
+    background-color:rgba(255,255,255,0.9);
+    display:inline-block;
+    color:#000;
+    box-size:border-box;
+    max-width:63%;
+    max-width: 22em;
+    font-size: 32px;
+    padding: .2em .5em;
+    margin-top: 30px;
+}
+@keyframes fadeIn{
+    0% { opacity:0;}
+    100% { opacity:1;}
+}
+@keyframes txtFlyIn{
+    0% { transform:translateX(-100%); }
+    100% { transform:translateX(0%); }
+}

@@ -1,0 +1,237 @@
+$color_1: transparent;
+$color_2: white;
+$font-family_1: "Source Sans Pro", sans-serif;
+$background-color_1: #17141d;
+$background-color_2: #2e3033;
+$border-color_1: #0051f4;
+
+/* wapper 2*/
+@-webkit-keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@-webkit-keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+/* Bubal */
+/* manual__card */
+@-webkit-keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+/*  */
+/* .pattern {
+  position: relative;
+  background-color: #3bb78f;
+  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+}
+ */
+body {
+  background: radial-gradient(
+    ellipse at center,
+    #fffeea 0%,
+    #fffeea 35%,
+    #b7e8eb 100%
+  );
+  overflow: auto;
+  overflow-x: hidden;
+}
+.thankyou {
+  background: 50% 100%/50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: $color_1;
+  font-size: 5vw;
+  font-family: $font-family_1;
+  -webkit-animation: reveal 3000ms ease-in-out forwards 200ms,
+    glow 2500ms linear infinite 2000ms;
+  animation: reveal 3000ms ease-in-out forwards 200ms,
+    glow 2500ms linear infinite 2000ms;
+}
+.container {
+  height: 300px;
+  width: 1000px;
+  top: 60px;
+  left: calc(50% - 300px);
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.card {
+  display: flex;
+  height: auto;
+  width: 300px;
+  background-color: $background-color_1;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+  &:not(:first-child) {
+    margin-left: -50px;
+  }
+  &:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+    ~ {
+      .card {
+        position: relative;
+        left: 50px;
+        transition: 0.4s ease-out;
+      }
+    }
+    .filledbar {
+      width: 120px;
+      transition: 0.4s ease-out;
+    }
+    .stroke {
+      stroke-dashoffset: 100;
+      transition: 0.6s ease-out;
+    }
+  }
+}
+.title {
+  color: $color_2;
+  font-weight: 600;
+  font-size: 1.4rem;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+.emptybar {
+  background-color: $background-color_2;
+  width: 100%;
+  height: 100%;
+}
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0, 154, 217);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 154, 217, 1) 0%,
+    rgba(217, 147, 0, 1) 65%,
+    rgba(255, 186, 0, 1) 100%
+  );
+  transition: 0.6s ease-out;
+}
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+.manual__card {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  &:hover {
+    transform: rotateY(360deg);
+    transition: transform 0.5s;
+  }
+}
+.cube {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #003298;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  -webkit-animation: cube 12s ease-in forwards infinite;
+  animation: cube 12s ease-in forwards infinite;
+  &:nth-child(2n) {
+    border-color: $border-color_1;
+  }
+  &:nth-child(2) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+  }
+  &:nth-child(3) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+  }
+  &:nth-child(4) {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+  }
+  &:nth-child(5) {
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+  }
+  &:nth-child(6) {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
+}
+.pattern {
+  > img {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
