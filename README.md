@@ -1,11 +1,6 @@
-# 𝚄𝚗𝚒𝚚𝚞𝚎 𝙿𝚛𝚘𝚓𝚎𝚌𝚝 𝙸𝚍𝚎𝚊𝚜 𝚝𝚘 𝙸𝚖𝚙𝚛𝚘𝚟𝚎 𝚈𝚘𝚞𝚛 𝚁𝚎𝚊𝚌𝚝 𝚂𝚔𝚒𝚕𝚕𝚜
+# :ledger: 𝚄𝚗𝚒𝚚𝚞𝚎 𝙿𝚛𝚘𝚓𝚎𝚌𝚝 𝙸𝚍𝚎𝚊𝚜 𝚝𝚘 𝙸𝚖𝚙𝚛𝚘𝚟𝚎 𝚈𝚘𝚞𝚛 𝚁𝚎𝚊𝚌𝚝 𝚂𝚔𝚒𝚕𝚕𝚜
 
-<a href="https://funjavascript-9elj.vercel.app" target="_blank">![](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)</a>
-![](https://img.shields.io/badge/Maintained-Yes-indigo)
-![](https://img.shields.io/github/forks/SashenJayathilaka/Unique-Project-Ideas.svg)
-![](https://img.shields.io/github/stars/SashenJayathilaka/Unique-Project-Ideas.svg)
-![](https://img.shields.io/github/issues/SashenJayathilaka/Unique-Project-Ideas)
-![](https://img.shields.io/github/last-commit/SashenJayathilaka/Unique-Project-Ideas)
+<br />
 
 <!-- Table of Contents -->
 
@@ -32,11 +27,14 @@
 - [Contact](#handshake-contact)
 - [Acknowledgements](#gem-acknowledgements) -->
 
+
 <div align="center">
-<a href="https://funjavascript-9elj.vercel.app"><img width='800rem' src='https://user-images.githubusercontent.com/99184393/193486630-71eb2665-eab4-4158-8941-96fc26e24e66.png' alt='image'/></a>
+<a href="https://funjavascript-9elj.vercel.app"><img width='800px' src='https://user-images.githubusercontent.com/99184393/193486630-71eb2665-eab4-4158-8941-96fc26e24e66.png' alt='image'/></a>
 </div>
 
+
 <br />
+<img src='https://img.shields.io/badge/contributions-welcome-green'/>
 
 ![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
 ![forthebadge](https://forthebadge.com/images/badges/for-you.svg)
