@@ -1,0 +1,21 @@
+{
+  "name": "tiktok-backend",
+  "version": "1.0.0",
+  "description": "Epic Tictok backend",
+  "main": "server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=13.x.x",
+    "npm": ">=3.9.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sashen Hasindu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.3"
+  }
+}
