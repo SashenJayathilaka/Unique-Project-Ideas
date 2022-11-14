@@ -1,0 +1,71 @@
+@import compass
+@import compass/css3/animation
+
+$num: 20
+
+html
+  overflow: hidden
+  height: 100%
+  background: radial-gradient(ellipse at bottom, #192E47 0%, #030617 100%)
+
+@function shadowValue($radius,$cosV,$sinV,$bokeh,$lineColor) 
+  $value: '#{($radius*$cosV)}px #{($radius*$sinV)}px #{$bokeh}px #{$lineColor}'
+  $value: '#{$value} ,#{(($radius - 1)*$cosV)}px #{(($radius - 1)*$sinV)}px #{$bokeh}px #{$lineColor}'
+  $radius: $radius / 1.8
+  $value: '#{$value} ,#{($radius*$cosV)}px #{($radius*$sinV)}px #{$bokeh}px #{$lineColor}'
+  $value: '#{$value} ,#{(($radius - 1)*$cosV)}px #{(($radius - 1)*$sinV)}px #{$bokeh}px #{$lineColor}'
+  $radius: $radius / 2
+  $value: '#{$value} ,#{($radius*$cosV)}px #{($radius*$sinV)}px #{$bokeh}px #{$lineColor}'
+  $radius: $radius / 10
+  $value: '#{$value} ,#{($radius*$cosV)}px #{($radius*$sinV)}px #{$bokeh}px #{$lineColor}'
+  @return unquote($value)
+
+@function ringEffect ($n,$radius,$bokeh,$lineColor) 
+  $value: '0px 0px #FFF'
+  @for $i from 0 through $n
+    $radian: (360/$n)*$i * pi() / 180
+    $value: '#{$value} , #{shadowValue($radius,cos($radian),sin($radian),$bokeh,$lineColor)}'
+  @return unquote($value)
+
+@for $i from 0 through $num
+  .fire#{$i}
+    $rand1: random(100) + '%'
+    $rand2: random(100) + '%'
+    top: #{$rand1}
+    left: #{$rand2}
+
+    $color: unquote('hsl(#{random(240)},70%,70%)')
+    .ring_1
+      width: 1px
+      height: 1px
+      box-shadow: ringEffect(30,30,0,#{$color})
+
+    .ring_2
+      width: 1px
+      height: 1px
+      box-shadow: ringEffect(30,30,2,#{$color})
+
+.fireworks
+  opacity: 0
+  position: absolute
+  
+$basetime: 0
+@for $i from 0 through $num  
+  $basetime : $basetime * 2
+  @if $basetime == 0
+    $basetime: 3
+  .pattern#{$i}
+    @include animation(pattern#{$i} #{(random(8) + 2)}s ease infinite)
+
+  @include keyframes(pattern#{$i}) 
+    $scale: random(7)
+    0%
+      opacity: 0
+    40%
+      opacity: 0
+      @include transform(scale(0.1))
+    50%
+      opacity: 1
+    100% 
+      @include transform(scale(#{$scale}))
+      opacity: 0
