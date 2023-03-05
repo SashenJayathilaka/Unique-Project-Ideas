@@ -1,0 +1,8 @@
+* {
+  margin: 0;
+}
+
+.app {
+  width: 100vw;
+  background-image: linear-gradient(to right, #051421, #042727);
+}
