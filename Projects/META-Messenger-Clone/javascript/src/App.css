@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+.messenger__image {
+  object-fit: contain;
+  height: 100px;
+  margin-top: 40px;
+}
+
+.app_form {
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  background-color: #e9e9eb;
+  width: 90%;
+  margin: 20px;
+}
+
+.app__formControl {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+
+.app__input {
+  flex: 1;
+}
+
+.app_iconsButton {
+  flex: 0;
+}
