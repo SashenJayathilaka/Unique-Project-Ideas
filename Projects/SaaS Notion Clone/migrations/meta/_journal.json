@@ -1,0 +1,76 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1718414989608,
+      "tag": "0000_workable_risque",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1718415594365,
+      "tag": "0001_common_calypso",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1718423324036,
+      "tag": "0002_reflective_malice",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1719535465922,
+      "tag": "0003_loving_jocasta",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1719798266009,
+      "tag": "0004_clean_zombie",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1719798443762,
+      "tag": "0005_wonderful_runaways",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1719798537906,
+      "tag": "0006_cooing_natasha_romanoff",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1719805138723,
+      "tag": "0007_rainy_shriek",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1719827383781,
+      "tag": "0008_ambiguous_morlun",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1719828921081,
+      "tag": "0009_unknown_arclight",
+      "breakpoints": true
+    }
+  ]
+}
